@@ -2,6 +2,7 @@ import React from 'react'
 import { useRouter } from 'next/dist/client/router';
 import { getPosts, getPostDetails } from '../../services';
 import { PostDetail, Categories, PostWidget, Author, CommentsForm,Comments } from '../../components'
+import { Loader } from '../../components';
 const PostDetails = ({ post }) => {
   const router =useRouter();
   if(router.isFallback){
