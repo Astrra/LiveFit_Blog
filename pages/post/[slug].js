@@ -6,9 +6,10 @@ import { Loader } from '../../components';
 const PostDetails = ({ post }) => {
   const router =useRouter();
   if(router.isFallback){
-    <Loader/>
+    return <Loader/>
   }
     return (
+      <>
         <div className='container mx-auto px-10 mb-8'>
             <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
                 <div className='col-span-1 lg:col-span-8'>
@@ -25,10 +26,11 @@ const PostDetails = ({ post }) => {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 
-export default PostDetails
+export default PostDetails;
 export async function getStaticProps({ params }) {
     const data = await getPostDetails(params.slug);
     return {
