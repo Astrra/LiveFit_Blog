@@ -24,7 +24,7 @@ export default function Home({posts}){
           </div>
         </div>
       </div>
-
+    
     </div>
   )
 }
